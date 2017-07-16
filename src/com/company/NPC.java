@@ -11,11 +11,12 @@ public class NPC {
     private String npcClass; //Hero, Boss, Villain, Henchman, Vendor, etc
     private String npcSpecies; //Goblin, Human, etc
     private String npcLOC; //What village, or plane is it in
-
+//Empty Constructor
     public NPC(){
 
     }
 
+    //Argument Constructor
     public NPC(String name, double hp, String loot, String description, String classType, String speciesType, String location){
 
 
@@ -27,12 +28,22 @@ public class NPC {
         this.npcSpecies = speciesType;
         this.npcLOC = location;
     }
+//Copy Constructor
+    public NPC(NPC generatedNPC){
+        npcName = generatedNPC.npcName;
+        npcHP = generatedNPC.npcHP;
+        npcLoot = generatedNPC.npcLoot;
+        npcDescription = generatedNPC.npcDescription;
+        npcClass = generatedNPC.npcClass;
+        npcSpecies = generatedNPC.npcSpecies;
+        npcLOC = generatedNPC.npcLOC;
+    }
 
 
 
-
+//Displays all the stats
     public void DisplayStats(){
-        System.out.println("NPC is called "+npcName + " a "+npcSpecies + " "+ npcClass
+        System.out.println("NPC is called "+npcName + " the "+npcSpecies + " "+ npcClass
                 + "\nShort Description: " + npcDescription
                 + "\nCurrent Location: " + npcLOC
                 + "\nPossible Loot: " + npcLoot
