@@ -1,5 +1,7 @@
 package com.company;
 
+import java.util.Scanner;
+
 /**
  * Created by danny on 7/12/17.
  */
@@ -44,6 +46,7 @@ public class NPC {
 //Displays all the stats
     public void DisplayStats(){
         System.out.println("NPC is called "+npcName + " the "+npcSpecies + " "+ npcClass
+                + "\nHas HP of: "+ npcHP
                 + "\nShort Description: " + npcDescription
                 + "\nCurrent Location: " + npcLOC
                 + "\nPossible Loot: " + npcLoot
@@ -123,6 +126,8 @@ public class NPC {
         this.npcLOC = npcLOC;
 
     };
+
+
 
 
 }

@@ -80,6 +80,7 @@ public class Main {
 
 
 
+
        System.out.println("1.Add A new NPC" +
                "\n2.Display List" +
                "\n3. Exit"
@@ -115,13 +116,13 @@ public class Main {
 
 
 
-        System.out.println("Get NPC HP");
-        double npcHP = input.nextDouble();
-        npc1.setNpcHP(npcHP);
+
+
 
         System.out.println("NPC Loot Table");
         String npcLoot = input.nextLine();
         npc1.setNpcLootDrop(npcLoot);
+
 
 
         System.out.println("Get NPC Description");
@@ -144,6 +145,10 @@ public class Main {
         String npcLocation = input.nextLine();
         npc1.setNpcLOC(npcLocation);
 
+        System.out.println("Get NPC HP");
+        double npcHP = input.nextDouble();
+        npc1.setNpcHP(npcHP);
+
         npc1.DisplayStats();
         System.out.println("\n");
         npc2.DisplayStats();
@@ -151,9 +156,7 @@ public class Main {
         npc3.DisplayStats();
         System.out.println("\n");
         npc4.DisplayStats();
-
-
-
+        System.out.println("\n");
 
 
 
@@ -162,4 +165,7 @@ public class Main {
 
 
     }
+
+
+
 }
