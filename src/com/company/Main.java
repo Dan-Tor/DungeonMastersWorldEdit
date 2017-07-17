@@ -73,7 +73,10 @@ public class Main {
        NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
        NPC npc3 = new NPC("Greebo The Great", 5, "100 Gold Coins", "Items Vendor", "Vendor", "Goblin", "Market Place");
        //Adding it to the list
-
+       NPC npc4 = new NPC(npc2);
+       npc4.setNpcName("Mike Test");
+       npc4.setNpcLootDrop("Golden Hammer");
+       npc4.setNpcHP(15);
 
 
 
@@ -146,6 +149,8 @@ public class Main {
         npc2.DisplayStats();
         System.out.println("\n");
         npc3.DisplayStats();
+        System.out.println("\n");
+        npc4.DisplayStats();
 
 
 

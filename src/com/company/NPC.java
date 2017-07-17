@@ -30,13 +30,13 @@ public class NPC {
     }
 //Copy Constructor
     public NPC(NPC generatedNPC){
-        npcName = generatedNPC.npcName;
-        npcHP = generatedNPC.npcHP;
-        npcLoot = generatedNPC.npcLoot;
-        npcDescription = generatedNPC.npcDescription;
-        npcClass = generatedNPC.npcClass;
-        npcSpecies = generatedNPC.npcSpecies;
-        npcLOC = generatedNPC.npcLOC;
+        this.npcName = generatedNPC.npcName;
+        this.npcHP = generatedNPC.npcHP;
+        this.npcLoot = generatedNPC.npcLoot;
+        this.npcDescription = generatedNPC.npcDescription;
+        this.npcClass = generatedNPC.npcClass;
+        this.npcSpecies = generatedNPC.npcSpecies;
+        this.npcLOC = generatedNPC.npcLOC;
     }
 
 
