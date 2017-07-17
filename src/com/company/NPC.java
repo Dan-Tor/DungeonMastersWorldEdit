@@ -53,7 +53,11 @@ public class NPC {
         );
 
 
+
+
     }
+
+
 
 
     //Getters & Setters
@@ -126,6 +130,8 @@ public class NPC {
         this.npcLOC = npcLOC;
 
     };
+
+
 
 
 

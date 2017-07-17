@@ -1,4 +1,5 @@
 package com.company;
+import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Vector;
 
@@ -64,7 +65,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-
+        ArrayList npcList = new ArrayList();
+        System.out.println("Initial Size: "+npcList.size());
 
 
 
@@ -78,10 +80,17 @@ public class Main {
        npc4.setNpcLootDrop("Golden Hammer");
        npc4.setNpcHP(15);
 
+       npcList.add(npc1);
+       npcList.add(npc2);
+       npcList.add(npc3);
+       npcList.add(npc4);
+
+       System.out.println("Current Size " + npcList.size());
+       System.out.print("All Current NPCs: " + npcList.toString());
 
 
 
-       System.out.println("1.Add A new NPC" +
+       System.out.println("\n1.Add A new NPC" +
                "\n2.Display List" +
                "\n3. Exit"
 
@@ -95,6 +104,8 @@ public class Main {
                 switch (choice) {
                     case 0:
                         System.out.println("Add a new NPC");
+
+
                         break;
                     case 1:
                         System.out.println("Display List");
@@ -157,7 +168,6 @@ public class Main {
         System.out.println("\n");
         npc4.DisplayStats();
         System.out.println("\n");
-
 
 
 
