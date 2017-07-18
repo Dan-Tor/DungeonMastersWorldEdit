@@ -63,6 +63,7 @@ public class Main {
 
 
 
+
     public static void main(String[] args) {
 
         ArrayList npcList = new ArrayList();
@@ -85,8 +86,7 @@ public class Main {
        npcList.add(npc3);
        npcList.add(npc4);
 
-       System.out.println("Current Size " + npcList.size());
-       System.out.print("All Current NPCs: " + npcList.toString());
+
 
 
 
@@ -170,8 +170,10 @@ public class Main {
         System.out.println("\n");
 
 
+        System.out.println(" ***************************** ");
+        System.out.println("\nCurrent Size " + npcList.size());
 
-
+        System.out.print("\nAll Current NPCs: " + npcList.toString());
 
 
     }

@@ -57,7 +57,17 @@ public class NPC {
 
     }
 
+    @Override
+    public String toString() {
 
+
+        return  "\nThis is the toString function call\n ********* \n"
+                +"\n Name: "+npcName + " the "+npcSpecies + " "+ npcClass
+                + "\nHP: "+ npcHP
+                + "\nDescription: " + npcDescription
+                + "\nCurrently Located At: " + npcLOC
+                + "\nItems: " + npcLoot;
+    }
 
 
     //Getters & Setters
