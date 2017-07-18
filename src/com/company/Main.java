@@ -65,110 +65,61 @@ public class Main {
 
 
     public static void main(String[] args) {
-
-        ArrayList npcList = new ArrayList();
+//This is the list
+        ArrayList <NPC> npcList = new ArrayList<NPC>();
         System.out.println("Initial Size: "+npcList.size());
 
-
+//This is the limit of new NPC, this needs to be changed to unlimited in the near future
+        NPC[] npc = new NPC[10000];
 
        //Testing NPC object
-       NPC npc1 = new NPC();
        NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
-       NPC npc3 = new NPC("Greebo The Great", 5, "100 Gold Coins", "Items Vendor", "Vendor", "Goblin", "Market Place");
-       //Adding it to the list
-       NPC npc4 = new NPC(npc2);
-       npc4.setNpcName("Mike Test");
-       npc4.setNpcLootDrop("Golden Hammer");
-       npc4.setNpcHP(15);
-
-       npcList.add(npc1);
        npcList.add(npc2);
-       npcList.add(npc3);
-       npcList.add(npc4);
 
 
 
+//The 3 npc testing limit is just for debuggin purposes
+for (int i = 1; i <= 3 ; i++){
+    Scanner input = new Scanner(System.in);
+  System.out.println("\nThis is the number of loops "+ i + "\n");
+    npc[i] = new NPC();
+    System.out.println("Get NPC Name");
+    String npcName = input.nextLine();
+    npc[i].setNpcName(npcName);
 
 
-       System.out.println("\n1.Add A new NPC" +
-               "\n2.Display List" +
-               "\n3. Exit"
+    System.out.println("NPC Loot Table");
+    String npcLoot = input.nextLine();
+    npc[i].setNpcLootDrop(npcLoot);
 
-       );
-        //Crappy switch statement
+    System.out.println("Get NPC Description");
+    String npcDescription = input.nextLine();
+    npc[i].setNpcDescription(npcDescription);
 
-        Scanner menu = new Scanner(System.in);
-        int choice = menu.nextInt();
-        do {
-            {
-                switch (choice) {
-                    case 0:
-                        System.out.println("Add a new NPC");
+    System.out.println("Get NPC Class");
+    String npcClass = input.nextLine();
+    npc[i].setNpcClass(npcClass);
 
+    System.out.println("Get NPC Species");
+    String npcSpecies = input.nextLine();
+    npc[i].setNpcSpecies(npcSpecies);
 
-                        break;
-                    case 1:
-                        System.out.println("Display List");
-                        break;
-                    default:
-                        System.out.println("Exit");
+    System.out.println("Get NPC Location");
+    String npcLocation = input.nextLine();
+    npc[i].setNpcLOC(npcLocation);
 
-                }
-            }
-        }while(choice >=3);
-
-        //Getting user input
-       Scanner input = new Scanner(System.in);
+    System.out.println("Get NPC HP");
+    double npcHP = input.nextDouble();
+    npc[i].setNpcHP(npcHP);
 
 
-       System.out.println("Get NPC Name");
-       String npcName = input.nextLine();
-       npc1.setNpcName(npcName);
+    npcList.add(npc[i]);
+}
 
+        System.out.println("New Initial Size: "+npcList.size());
 
-
-
-
-
-        System.out.println("NPC Loot Table");
-        String npcLoot = input.nextLine();
-        npc1.setNpcLootDrop(npcLoot);
-
-
-
-        System.out.println("Get NPC Description");
-        String npcDescription = input.nextLine();
-        npc1.setNpcDescription(npcDescription);
-
-
-
-        System.out.println("Get NPC Class");
-        String npcClass = input.nextLine();
-        npc1.setNpcClass(npcClass);
-
-
-        System.out.println("Get NPC Species");
-        String npcSpecies = input.nextLine();
-        npc1.setNpcSpecies(npcSpecies);
-
-
-        System.out.println("Get NPC Location");
-        String npcLocation = input.nextLine();
-        npc1.setNpcLOC(npcLocation);
-
-        System.out.println("Get NPC HP");
-        double npcHP = input.nextDouble();
-        npc1.setNpcHP(npcHP);
-
-        npc1.DisplayStats();
-        System.out.println("\n");
         npc2.DisplayStats();
         System.out.println("\n");
-        npc3.DisplayStats();
-        System.out.println("\n");
-        npc4.DisplayStats();
-        System.out.println("\n");
-
 
         System.out.println(" ***************************** ");
         System.out.println("\nCurrent Size " + npcList.size());
