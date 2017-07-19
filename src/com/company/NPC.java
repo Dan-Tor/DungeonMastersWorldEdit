@@ -1,5 +1,6 @@
 package com.company;
 
+
 import java.util.Scanner;
 
 /**
@@ -43,31 +44,24 @@ public class NPC {
 
 
 
-//Displays all the stats
-    public void DisplayStats(){
-        System.out.println("NPC is called "+npcName + " the "+npcSpecies + " "+ npcClass
-                + "\nHas HP of: "+ npcHP
-                + "\nShort Description: " + npcDescription
-                + "\nCurrent Location: " + npcLOC
-                + "\nPossible Loot: " + npcLoot
-        );
 
 
-
-
-    }
-
+//This is the toString, same as DisplayStats
     @Override
     public String toString() {
-
-
-        return  "\nThis is the toString function call\n ********* \n"
-                +"\n Name: "+npcName + " the "+npcSpecies + " "+ npcClass
+        return
+                "\n===================================================="
+                +"\nName: "+npcName + " the "+npcSpecies + " "+ npcClass
                 + "\nHP: "+ npcHP
                 + "\nDescription: " + npcDescription
                 + "\nCurrently Located At: " + npcLOC
-                + "\nItems: " + npcLoot;
+                + "\nItems: " + npcLoot
+                + "\n===================================================\n";
     }
+
+
+
+
 
 
     //Getters & Setters
@@ -129,17 +123,7 @@ public class NPC {
     }
 
 
-    public void getStats(String npcName, double npcHP,String npcLootDrop,String npcDescription,String npcClass,String npcSpecies, String npcLOC  ){
 
-        this.npcName = npcName;
-        this.npcHP = npcHP;
-        this.npcLoot= npcLootDrop;
-        this.npcDescription = npcDescription;
-        this.npcClass = npcClass;
-        this.npcSpecies = npcSpecies;
-        this.npcLOC = npcLOC;
-
-    };
 
 
 
