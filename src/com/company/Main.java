@@ -65,7 +65,7 @@ public class Main {
     static ArrayList <NPC> npcList = new ArrayList<NPC>();
     static NPC[] npc = new NPC[10000];
 
-     static public void newNPC(){
+    static public void newNPC(){
 
         Scanner input = new Scanner(System.in);
         System.out.println("\nThis is the number of loops "+ i + "\n");
@@ -112,7 +112,7 @@ public class Main {
         System.out.println("Initial Size: "+npcList.size());
 
 //This is the limit of new NPC, this needs to be changed to unlimited in the near future
-        NPC[] npc = new NPC[10000];
+
 
        //Testing NPC object
        NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
