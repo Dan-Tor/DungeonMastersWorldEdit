@@ -62,13 +62,13 @@ public class Main {
 
     static int i = 1;
 
-    static ArrayList <NPC> npcList = new ArrayList<NPC>();
+    static ArrayList<NPC> npcList = new ArrayList<NPC>();
     static NPC[] npc = new NPC[10000];
 
-    static public void newNPC(){
+    static public void newNPC() {
 
         Scanner input = new Scanner(System.in);
-        System.out.println("\nThis is the number of loops "+ i + "\n");
+        System.out.println("\nThis is the number of loops " + i + "\n");
         npc[i] = new NPC();
         System.out.println("Get NPC Name");
         String npcName = input.nextLine();
@@ -100,27 +100,56 @@ public class Main {
         npc[i].setNpcHP(npcHP);
 
         npcList.add(npc[i]);
-         i++;
+        i++;
 
     }
 
+
+    //This is the test block for items
+    static int y = 1;
+    static ArrayList<Items> itemCatalogue = new ArrayList<Items>();
+    static Items[] item = new Items[10000];
+
+    static public void newItem() {
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("\nThis is the number of loops " + y + "\n");
+
+        item[y] = new Items();
+
+        System.out.println("Add Item Name: ");
+        String itemName = input.nextLine();
+        item[y].setItemName(itemName);
+
+        System.out.println("Add Item Description: ");
+        String itemDescription = input.nextLine();
+
+        item[y].setItemDescription(itemDescription);
+        System.out.println("Add Item Cost: ");
+        double itemCost = input.nextDouble();
+
+        item[y].setItemCost(itemCost);
+        itemCatalogue.add(item[y]);
+        y++;
+
+    }
 
 
     public static void main(String[] args) {
 //This is the list
 
-        System.out.println("Initial Size: "+npcList.size());
+        System.out.println("Initial Size: " + npcList.size());
 
 //This is the limit of new NPC, this needs to be changed to unlimited in the near future
 
 
-       //Testing NPC object
-       NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
-       npcList.add(npc2);
+        //Testing NPC object
+        NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
+        npcList.add(npc2);
 
 //This is a reworked switch statement that is finally looping properly
 
-       int option;
+        int option;
         Scanner in = new Scanner(System.in);
         do {
             do {
@@ -128,12 +157,15 @@ public class Main {
                         + "\n(1) Make a new NPC."
                         + "\n(2) Display all NPC."
                         + "\n(3) Display list size"
-                        + "\n(4) Exit Program";
+                        + "\n(4) Make a new Item"
+                        + "\n(5) Display Item Catalogue"
+                        + "\n(6) Exit Program";
                 System.out.println(menu);
                 option = in.nextInt();
-            } while(option < 0 || option > 3); // This will make the menu repeat if option is higher than 6 or lowen than 0.
+            }
+            while (option < 0 || option > 6); // This will make the menu repeat if option is higher than 6 or lowen than 0.
 
-            switch(option) {
+            switch (option) {
                 case 1:
                     System.out.println("Make a New NPC");
                     newNPC();
@@ -147,6 +179,14 @@ public class Main {
                     System.out.println("Display current npc list size");
                     System.out.println("\nCurrent Size " + npcList.size());
                     break;
+                case 4:
+                    System.out.println("Add Item");
+                    newItem();
+                    break;
+                case 5:
+                    System.out.println("Display All items");
+                    System.out.println("\nCurrent Catalogue Size: " + itemCatalogue.size());
+                    System.out.println("\nAll current items: " + itemCatalogue.toString());
                 default:
                     System.out.println("Exit");
                     break;
@@ -154,61 +194,5 @@ public class Main {
         } while (option != 0);
 
 
-//The 3 npc testing limit is just for debuggin purposes
-/*
-for (int i = 1; i <= 3 ; i++){
-    Scanner input = new Scanner(System.in);
-  System.out.println("\nThis is the number of loops "+ i + "\n");
-    npc[i] = new NPC();
-    System.out.println("Get NPC Name");
-    String npcName = input.nextLine();
-    npc[i].setNpcName(npcName);
-
-
-    System.out.println("NPC Loot Table");
-    String npcLoot = input.nextLine();
-    npc[i].setNpcLootDrop(npcLoot);
-
-    System.out.println("Get NPC Description");
-    String npcDescription = input.nextLine();
-    npc[i].setNpcDescription(npcDescription);
-
-    System.out.println("Get NPC Class");
-    String npcClass = input.nextLine();
-    npc[i].setNpcClass(npcClass);
-
-    System.out.println("Get NPC Species");
-    String npcSpecies = input.nextLine();
-    npc[i].setNpcSpecies(npcSpecies);
-
-    System.out.println("Get NPC Location");
-    String npcLocation = input.nextLine();
-    npc[i].setNpcLOC(npcLocation);
-
-    System.out.println("Get NPC HP");
-    double npcHP = input.nextDouble();
-    npc[i].setNpcHP(npcHP);
-
-
-    npcList.add(npc[i]);
-}
-
-
-
-
-        System.out.println("New Initial Size: "+npcList.size());
-
-        npc2.DisplayStats();
-        System.out.println("\n");
-
-        System.out.println(" ***************************** ");
-        System.out.println("\nCurrent Size " + npcList.size());
-
-        System.out.print("\nAll Current NPCs: " + npcList.toString());
-
-*/
     }
-
-
-
 }
