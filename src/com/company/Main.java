@@ -65,6 +65,8 @@ public class Main {
     static ArrayList<NPC> npcList = new ArrayList<NPC>();
     static NPC[] npc = new NPC[10000];
 
+
+
     static public void newNPC() {
 
         Scanner input = new Scanner(System.in);
