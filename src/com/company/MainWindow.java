@@ -16,7 +16,6 @@ public class MainWindow {
     private JButton currentSizeOfListButton;
 
 
-
     //List components
     static int i = 1;
 

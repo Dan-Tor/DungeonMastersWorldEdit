@@ -143,7 +143,7 @@ public class Main {
         System.out.println("Initial Size: " + npcList.size());
 
 //This is the limit of new NPC, this needs to be changed to unlimited in the near future
-
+LootDice dice1 = new LootDice();
 
         //Testing NPC object
         NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
@@ -161,11 +161,12 @@ public class Main {
                         + "\n(3) Display list size"
                         + "\n(4) Make a new Item"
                         + "\n(5) Display Item Catalogue"
-                        + "\n(6) Exit Program";
+                        + "\n(6) Roll 6-Sided Loot Dice"
+                        + "\n(7) Exit Program";
                 System.out.println(menu);
                 option = in.nextInt();
             }
-            while (option < 0 || option > 6); // This will make the menu repeat if option is higher than 6 or lowen than 0.
+            while (option < 0 || option > 7); // This will make the menu repeat if option is higher than 6 or lowen than 0.
 
             switch (option) {
                 case 1:
@@ -189,9 +190,15 @@ public class Main {
                     System.out.println("Display All items");
                     System.out.println("\nCurrent Catalogue Size: " + itemCatalogue.size());
                     System.out.println("\nAll current items: " + itemCatalogue.toString());
+                    break;
+                case 6:
+                    System.out.println("Rolling D6");
+                    dice1.rollDice();
+                    break;
                 default:
                     System.out.println("Exit");
                     break;
+                    
             }
         } while (option != 0);
 
