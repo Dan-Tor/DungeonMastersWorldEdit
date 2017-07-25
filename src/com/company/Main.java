@@ -144,6 +144,7 @@ public class Main {
 
 //This is the limit of new NPC, this needs to be changed to unlimited in the near future
 LootDice dice1 = new LootDice();
+LootDice dice2 = new LootDice();
 
         //Testing NPC object
         NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
@@ -162,7 +163,8 @@ LootDice dice1 = new LootDice();
                         + "\n(4) Make a new Item"
                         + "\n(5) Display Item Catalogue"
                         + "\n(6) Roll 6-Sided Loot Dice"
-                        + "\n(7) Exit Program";
+                        + "\n(7) Roll 3-Sided Loot Dice"
+                        + "\n(8) Exit Program";
                 System.out.println(menu);
                 option = in.nextInt();
             }
@@ -193,12 +195,16 @@ LootDice dice1 = new LootDice();
                     break;
                 case 6:
                     System.out.println("Rolling D6");
-                    dice1.rollDice();
+                    dice1.rollD6();
+                    break;
+                case 7:
+                    System.out.println("Rolling D3");
+                    dice2.rollD3();
                     break;
                 default:
                     System.out.println("Exit");
                     break;
-                    
+
             }
         } while (option != 0);
 
