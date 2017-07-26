@@ -41,32 +41,32 @@ public class LootDice {
         int n = rand.nextInt(6) + 1;
         switch (n) {
             case 1:
-                System.out.println("\n======================" +
+                System.out.println("\n========= " + n + " =============" +
                         "\nSword of Fury and Fire" +
                         "\n======================");
                 break;
             case 2:
-                System.out.println("\n======================" +
+                System.out.println("\n========= " + n + " =============" +
                         "\n1000 Gold" +
                         "\n======================");
                 break;
             case 3:
-                System.out.println("\n======================" +
+                System.out.println("\n========= " + n + " =============" +
                         "\nShield of Purity" +
                         "\n======================");
                 break;
             case 4:
-                System.out.println("\n======================" +
+                System.out.println("\n========= " + n + " =============" +
                         "\nNecromancer's Book of the Occult" +
                         "\n======================");
                 break;
             case 5:
-                System.out.println("\n======================" +
+                System.out.println("\n========= " + n + " =============" +
                         "\nPriestess Flask of Salvation" +
                         "\n======================");
                 break;
             case 6:
-                System.out.println("\n======================" +
+                System.out.println("\n========= " + n + " =============" +
                         "\nSmall Kit of Potions" +
                         "\n======================");
                 break;
@@ -74,28 +74,137 @@ public class LootDice {
         }
     }
 
-        public void rollD3(){
+        public void rollD3() {
+            Random rand = new Random();
+            int n = rand.nextInt(3) + 1;
+            switch (n) {
+                case 1:
+                    System.out.println("\n========= " + n + " =============" +
+                            "\nRagnarok, Sword of Elemental Fury" +
+                            "\n======================");
+                    break;
+                case 2:
+                    System.out.println("\n========= " + n + " =============" +
+                            "\nAndromeda, Hammer of the Stars" +
+                            "\n======================");
+                    break;
+                case 3:
+                    System.out.println("\n========= " + n + " =============" +
+                            "\nColdera, Spear of the Frost-Lords" +
+                            "\n======================");
+                    break;
+
+            }
+        }
+
+
+    public void rollD20(){
         Random rand = new Random();
-        int  n = rand.nextInt(3) + 1;
+        int  n = rand.nextInt(20) + 1;
         switch (n){
             case 1:
-                System.out.println("\n======================" +
-                        "\nRagnarok, Sword of Elemental Fury" +
+                System.out.println("\n========= " + n + " =============" +
+                        "\n100 Gold" +
                         "\n======================");
                 break;
             case 2:
-                System.out.println("\n======================" +
-                        "\nAndromeda, Hammer of the Stars" +
+                System.out.println("\n========= " + n + " =============" +
+                        "\n1000 Gold" +
                         "\n======================");
                 break;
             case 3:
-                System.out.println("\n======================" +
-                        "\nColdera, Spear of the Frost-Lords" +
+                System.out.println("\n========= " + n + " =============" +
+                        "\nStaff of Unrelenting Fury" +
+                        "\n======================");
+                break;
+            case 4:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nDread-Lords Helmet of Fear" +
+                        "\n======================");
+                break;
+            case 5:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nWarlock's Scepter of Disarray" +
+                        "\n======================");
+                break;
+            case 6:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nPriestess Holy Book of Healing" +
+                        "\n======================");
+                break;
+            case 7:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nWarlords Fur Coat of Cold Winters" +
+                        "\n======================");
+                break;
+            case 8:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nStone Hatchet of Barbaric Fury" +
+                        "\n======================");
+                break;
+            case 9:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nScholars Tome of Spells" +
+                        "\n======================");
+                break;
+            case 10:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nLarge Kit of Potions" +
+                        "\n======================");
+                break;
+            case 11:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nEnchanted Boots of Jumping" +
+                        "\n======================");
+                break;
+            case 12:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nNecklace of Leaves" +
+                        "\n======================");
+                break;
+            case 13:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nElite Ranger's Bow" +
+                        "\n======================");
+                break;
+            case 14:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nBrute Spike-Shield" +
+                        "\n======================");
+                break;
+            case 15:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nGladiator's Chestpiece of Combat" +
+                        "\n======================");
+                break;
+            case 16:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nPoisonous Machete" +
+                        "\n======================");
+                break;
+            case 17:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nAssassin's Dagger" +
+                        "\n======================");
+                break;
+            case 18:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nGauntlet of Might" +
+                        "\n======================");
+                break;
+            case 19:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nFancy Pants of Fancydom" +
+                        "\n======================");
+                break;
+            case 20:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nCrime-Lords Hold Out Dagger" +
                         "\n======================");
                 break;
 
-    }
 
+        }
 
     }
 
