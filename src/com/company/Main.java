@@ -146,6 +146,7 @@ public class Main {
         LootDice dice1 = new LootDice();
         LootDice dice2 = new LootDice();
         LootDice dice3 = new LootDice();
+        LootDice dice4 = new  LootDice();
 
         //Testing NPC object
         NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
@@ -164,9 +165,10 @@ public class Main {
                         + "\n(4) Make a new Item"
                         + "\n(5) Display Item Catalogue"
                         + "\n(6) Roll 6-Sided Loot Dice"
-                        + "\n(7) Roll 3-Sided Loot Dice"
+                        + "\n(7) Roll 4-Sided Loot Dice"
                         + "\n(8) Roll 20-sided Loot Dice"
-                        + "\n(9) Exit Program";
+                        + "\n(9) Roll 10-sided Loot Dice"
+                        + "\n(0) Exit Program";
                 System.out.println(menu);
                 option = in.nextInt();
             }
@@ -200,12 +202,16 @@ public class Main {
                     dice1.rollD6();
                     break;
                 case 7:
-                    System.out.println("Rolling D3");
-                    dice2.rollD3();
+                    System.out.println("Rolling D4");
+                    dice2.rollD4();
                     break;
                 case 8:
                     System.out.println("Rolling D20");
                     dice3.rollD20();
+                    break;
+                case 9:
+                    System.out.println("Rolling D10");
+                    dice4.rollD10();
                     break;
                 default:
                     System.out.println("Exit");

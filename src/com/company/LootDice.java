@@ -74,9 +74,9 @@ public class LootDice {
         }
     }
 
-        public void rollD3() {
+        public void rollD4() {
             Random rand = new Random();
-            int n = rand.nextInt(3) + 1;
+            int n = rand.nextInt(4) + 1;
             switch (n) {
                 case 1:
                     System.out.println("\n========= " + n + " =============" +
@@ -93,9 +93,71 @@ public class LootDice {
                             "\nColdera, Spear of the Frost-Lords" +
                             "\n======================");
                     break;
+                case 4:
+                    System.out.println("\n========= " + n + " =============" +
+                            "\nTwilight Blade of Athomir" +
+                            "\n======================");
+                    break;
 
             }
         }
+
+    public void rollD10() {
+        Random rand = new Random();
+        int n = rand.nextInt(10) + 1;
+        switch (n) {
+            case 1:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nRagnarok, Sword of Elemental Fury" +
+                        "\n======================");
+                break;
+            case 2:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nAndromeda, Hammer of the Stars" +
+                        "\n======================");
+                break;
+            case 3:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nColdera, Spear of the Frost-Lords" +
+                        "\n======================");
+                break;
+            case 4:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nTwilight Blade of Athomir" +
+                        "\n======================");
+                break;
+            case 5:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nSun Shard Staff" +
+                        "\n======================");
+                break;
+            case 6:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nFlask of Invisibility" +
+                        "\n======================");
+                break;
+            case 7:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nStorm Stomper Boots" +
+                        "\n======================");
+                break;
+            case 8:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nGauntlet of SpellCasting" +
+                        "\n======================");
+                break;
+            case 9:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nWarcaster Spell-Scythe" +
+                        "\n======================");
+                break;
+            case 10:
+                System.out.println("\n========= " + n + " =============" +
+                        "\nCape of Starstuff" +
+                        "\n======================");
+                break;
+        }
+    }
 
 
     public void rollD20(){
