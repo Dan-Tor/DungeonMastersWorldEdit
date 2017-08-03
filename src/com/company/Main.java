@@ -146,7 +146,8 @@ public class Main {
         LootDice dice1 = new LootDice();
         LootDice dice2 = new LootDice();
         LootDice dice3 = new LootDice();
-        LootDice dice4 = new  LootDice();
+        LootDice dice4 = new LootDice();
+        LootDice dice5 = new LootDice();
 
         //Testing NPC object
         NPC npc2 = new NPC("Ashley Test", 20, "Ruby Sword", "Barbarian on the Hunt", "Barbarian", "Human", "Wildlands");
@@ -168,11 +169,12 @@ public class Main {
                         + "\n(7) Roll 4-Sided Loot Dice"
                         + "\n(8) Roll 20-sided Loot Dice"
                         + "\n(9) Roll 10-sided Loot Dice"
+                        +" \n(10) Roll 100-sided Dice"
                         + "\n(0) Exit Program";
                 System.out.println(menu);
                 option = in.nextInt();
             }
-            while (option < 0 || option > 9); // This will make the menu repeat if option is higher than 6 or lowen than 0.
+            while (option < 0 || option > 10); // This will make the menu repeat if option is higher than 6 or lowen than 0.
 
             switch (option) {
                 case 1:
@@ -212,6 +214,10 @@ public class Main {
                 case 9:
                     System.out.println("Rolling D10");
                     dice4.rollD10();
+                    break;
+                case 10:
+                    System.out.println("Rolling D10");
+                    dice5.rollD100();
                     break;
                 default:
                     System.out.println("Exit");

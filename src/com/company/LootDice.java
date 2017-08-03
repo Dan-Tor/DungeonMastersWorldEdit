@@ -159,6 +159,13 @@ public class LootDice {
         }
     }
 
+    public void rollD100(){
+        Random rand = new Random();
+        int  n = rand.nextInt(100) + 1;
+
+        System.out.println("\n//// "+ n +" ////");
+    }
+
 
     public void rollD20(){
         Random rand = new Random();
@@ -269,6 +276,8 @@ public class LootDice {
         }
 
     }
+
+
 
     };
 
